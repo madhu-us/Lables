@@ -1,0 +1,12 @@
+name: out of memory
+on:
+  push:
+  
+jobs:  
+  oom:
+    runs-on: ubuntu-latest
+    steps:
+      - run:
+          export NODE_OPTIONS="--max_old_space_size=4096"
+          echo "working"
+          
