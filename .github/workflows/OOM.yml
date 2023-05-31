@@ -7,7 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run:
-          node -e 'console.log(v8.getHeapStatistics().heap_size_limit/(1024*1024))'
-          #export NODE_OPTIONS="--max_old_space_size=4096"
+         # node -e 'console.log(v8.getHeapStatistics().heap_size_limit/(1024*1024))'
+          export NODE_OPTIONS="--max_old_space_size=4096" # for 4GB
+          #export NODE_OPTIONS="--max_old_space_size=8192" # for 8GB
           #echo "working"
           
